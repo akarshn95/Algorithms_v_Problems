@@ -40,3 +40,10 @@ Using two variables to keep track of min and max, the min and max values can be 
 
 Time Complexity - O(n); One-Pass
 Space Complexity - O(1); Constant time, only variables used to output max and min.
+
+7) HTTP Router
+
+Tries are used to implement HTTP routing, the trie nodes and trie class is very similar to the trie classes used in Auto-complete problem. The route class is used to use these nodes to perform HTTP routing. 
+
+add_handler has time complexity O(n); space complexity O(n)
+lookup has time complexity of O(n^2); space complexity O(1)
