@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 def sort_012(nums):
         """
         :type nums: List[int]
@@ -25,10 +19,6 @@ def sort_012(nums):
             i+=1
         return nums
 
-
-# In[8]:
-
-
 def test_function(test_case):
     sorted_array = sort_012(test_case)
     if sorted_array == sorted(test_case):
@@ -39,4 +29,7 @@ def test_function(test_case):
 test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
 test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
 test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
-
+test_function([])
+test_function([2])
+test_function([0])
+test_function([2,2,2,2,2,2,0,0,0,0,0,0])
