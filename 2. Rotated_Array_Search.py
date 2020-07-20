@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[14]:
-
-
 def find_pivot(input_list):
     start=0
     end=len(input_list)-1
@@ -16,7 +10,7 @@ def find_pivot(input_list):
             start=mid+1
         else:
             end=mid-1
-    
+    return 0
 
 def rotated_array_search(input_list, number):
     """
@@ -27,16 +21,20 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
+    ans=-1
+    if len(input_list)==0:
+        return ans
+    if len(input_list)==1:
+        return 0
     start=0
     end=len(input_list)-1
-    ans=-1
     
     pivot=find_pivot(input_list)
     if input_list[pivot]==number:
         return pivot
     if number<input_list[pivot]:
         return ans
-    elif input_list[pivot]<number<input_list[end]:
+    elif input_list[pivot]<number<=input_list[end]:
         ans=binary_search(input_list,pivot,end,number)
     elif number>input_list[pivot] and number<=input_list[pivot-1]:
         ans=binary_search(input_list,start,pivot-1,number)
@@ -74,4 +72,6 @@ test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
-
+test_function([[],1])
+test_function([[1],1])
+test_function([[1,2,3,4,5,6,7,8,9,11,22,33,4,55,66,77,88,99,100],100])
