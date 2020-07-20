@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 class RouteTrieNode:
     def __init__(self):
         self.children = {}
@@ -81,3 +75,13 @@ print(router.lookup("/home/about")) # should print 'about handler'
 print(router.lookup("/home/about/")) # should print 'about handler' or None if you did not handle trailing slashes
 print(router.lookup("/home/about/me")) # should print 'not found handler' or None if you did not implement one
 
+print("\n")
+router2 = Router("root handler", "not found handler")
+print(router2.lookup("/"))
+print(router2.lookup("/home"))
+
+print("\n")
+router3=Router("root_handler","not found handler")
+router3.add_handler("/home/contact","xabcx@ymail.com")
+print(router3.lookup("/home/contact"))
+print(router3.lookup("/home"))
