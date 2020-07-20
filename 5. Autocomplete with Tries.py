@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # # Building a Trie in Python
 # 
 # Before we start let us reiterate the key components of a Trie or Prefix Tree. A trie is a tree-like data structure that stores a dynamic set of strings. Tries are commonly used to facilitate operations like predictive text or autocomplete features on mobile phones or web search.
@@ -10,8 +7,6 @@
 # * A `TrieNode` class that exposes the general functionality of the Trie, like inserting a word or finding the node which represents a prefix.
 # 
 # Give it a try by implementing the `TrieNode` and `Trie` classes below!
-
-# In[17]:
 
 
 ## Represents a single node in the Trie
@@ -68,8 +63,6 @@ class Trie(object):
 # 
 # Run the following code to add some words to your trie and then use the interactive search box to see what your code returns.
 
-# In[29]:
-
 
 MyTrie = Trie()
 wordList = [
@@ -79,9 +72,6 @@ wordList = [
 ]
 for word in wordList:
     MyTrie.insert(word)
-
-
-# In[30]:
 
 
 from ipywidgets import widgets
@@ -97,4 +87,22 @@ def f(prefix):
     else:
         print('')
 interact(f,prefix='');
+
+
+# # TEST CASE 2
+# MyTrie = Trie()
+# wordList = [
+#     "zzz"
+# ]
+# for word in wordList:
+#     MyTrie.insert(word)
+# #interact(f,prefix='');
+
+# # TEST CASE 3
+# MyTrie = Trie()
+# wordList = [ ]
+# for word in wordList:
+#     MyTrie.insert(word)
+# #interact(f,prefix='');
+
 
