@@ -20,6 +20,10 @@ Merge sort is implemented to sort the array since it has good efficiency of O(nl
 Time Complexity - O(nlog n) Merge Sort + O(n) -> O(nlog n)
 Space Complexity - O(n); We store the sorted input list into strings whose length is proportional to the input list.
 
+Merge sort has recursive call stack with space complexity -> O(n), O(n/2), O(n/4) .... 
+Time Complexity - O(n long n)
+Space Complexity - O(n)
+
 4) Dutch National Flag 
 
 Using two pointers at the start and end of the array to swap 0 and 2 when found. When 2 is found and swapped, stall the iteration to check the element swapped by 2. 
