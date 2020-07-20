@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
-
 def get_min_max(ints):
     """
     Return a tuple(min, max) out of list of unsorted integers.
@@ -29,8 +23,10 @@ def get_min_max(ints):
 ## Example Test Case of Ten Integers
 import random
 
-l = [i for i in range(0, 10)]  # a list containing 0 - 9
+l = [i for i in range(0, 100)]  # a list containing 0 - 9
 random.shuffle(l)
 
-print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
-
+print ("Pass" if ((0, 99) == get_min_max(l)) else "Fail")
+print ("Pass" if ((-99, 99) == get_min_max([1,99,-1,-99,1,0,0,7])) else "Fail")
+print ("Pass" if ((-1) == get_min_max([])) else "Fail")
+print ("Pass" if ((1,1) == get_min_max([1])) else "Fail")
