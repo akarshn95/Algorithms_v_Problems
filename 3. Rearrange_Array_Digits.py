@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 def merge_sort(arr):
     
     if len(arr)>1:
@@ -48,9 +42,12 @@ def rearrange_digits(input_list):
     Returns:
        (int),(int): Two maximum sums
     """
-    sorted_list=merge_sort(input_list)
     str1=""
     str2=""
+    if len(input_list)==0:
+        return (-1,-1)
+    
+    sorted_list=merge_sort(input_list)
     
     if len(input_list)<2:
         return input_list
@@ -64,9 +61,6 @@ def rearrange_digits(input_list):
     return (int(str1),int(str2))      
 
 
-# In[2]:
-
-
 def test_function(test_case):
     output = rearrange_digits(test_case[0])
     solution = test_case[1]
@@ -76,11 +70,9 @@ def test_function(test_case):
         print("Fail")
 
 test_function([[1, 2, 3, 4, 5], [542, 31]])
-test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
-
-
-# In[ ]:
-
-
-
-
+test_function ([[4, 6, 2, 5, 9, 8], [964, 852]])
+test_function([[],[-1,-1]])
+test_function([[1,2],[2,1]])
+test_function([[2],[2]])
+test_function([[236],[236]])
+test_function([[9,9,9,8,8],[998,98]])
